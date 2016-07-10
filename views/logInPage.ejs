@@ -1,0 +1,92 @@
+<html>
+<head>
+	<% include partials/head.ejs %>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/styleLogIn.css' />
+     <!-- AngularJS -->
+	<script src= "../javascripts/angular/logInController.js"></script>
+	<script src="../jquery/jqueryHome.js"></script>
+	<meta http-equiv="Cache-Control"
+	content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+</head>
+
+<body ng-app="logInApp" ng-controller="logInController">
+<% include partials/header.ejs %>
+<div class = "container-fluid" >
+    <div class="image" style="background-image: url(../images/twitter_image.png);" >
+        <img id="icon" src="../images/twitter_icon.png" style="width :100px; height: 100px" />
+        <div>
+             <form action="/logIn" method="get">
+                <button type="button" class = " btn btn-lg pull-right" id = "button1">Log In</button>
+                 </form>
+             <form action="/signUp" method="get">
+                <button type="submit" class = "btn btn-lg pull-right" id = "button2" >Sign Up</button>
+             </form>
+
+            <div class = 'overlay'>
+             <div id= "wrapper">
+                 <h5 id = "h5">Log in to twitter</h5>
+                 <hr id="hr">
+                 <img id="twitterIcon" src="https://cdn2.iconfinder.com/data/icons/social-18/512/Twitter-3-32.png" />
+                 <form novalidate>
+                 <div class="alert alert-danger" ng-hide="invalid_login">
+	                <strong>Incorrect username or password</strong>
+	            </div>
+	            <div class="alert alert-danger" ng-hide="unexpected_error">
+	                <strong>Unexpected error, try again</strong>
+	            </div>
+                 <div class="form-group">
+                     <input type="text" class="form-control" id="emailDialog" ng-model="email" name="email" placeholder="Email" ng-required="true">
+                 	 <p class="error" style="margin-left: 70px;" ng-show="form.email.$invalid && form.email.$touched">You must fill out your location.</p>
+                 </div>
+                 <div class="form-group ">
+                     <input type="password" class="form-control" id="passwordDialog" ng-model="password" name="password" placeholder="Password" ng-required="true">
+                 	 <p class="error" style="margin-left: 70px;"  ng-show="form.password.$invalid && form.password.$touched">You must fill out your location.</p>
+                 </div>
+                 <div class="form-group ">
+                     <button type="submit" ng-disabled="form.$invalid" ng-click="logIn()" class="buttonLogin btn" id="buttonDialog">Log in</button>
+                 </div>
+                 </form>
+                 <hr id = "hr1">
+                 <h6 id="h6">Don't have an account? <a id="linktoSignUp" href="/signUp">Sign Up >></a></h6>
+             </div>
+            </div>
+
+            </div>
+        <div>
+        <h2 class = "h2" align="center">See what's happening right now.</h2>
+        <p class = "p" align = "center">Find community, conversation and inspiration about things you love.</p>
+        </div>
+    </div>
+</div>
+
+    <div id = "logInTable" class="col-sm-3 pull-right">
+        <div id="div">
+            <h3 class="whiteText">Log in to your Account</h3>
+            <form name="form" class = "pull-right"  novalidate>
+            	 <div class="alert alert-danger" ng-hide="invalid_login">
+	                <strong>Incorrect email or password</strong>
+	            </div>
+	            <div class="alert alert-danger" ng-hide="unexpected_error">
+	                <strong>Unexpected error, try again</strong>
+	            </div>
+                <div class="form-group pull-left">
+                    <input type="text" class="form-control" id="name" ng-model="email" name="email" placeholder="Email" ng-required="true">
+                	<p class="error" style="margin-left: 20px;" ng-show="form.email.$invalid && form.email.$touched">You must fill out your location.</p>
+                </div>
+                <div class="form-group pull-left">
+                    <input type="password" class="form-control" id="password" ng-model="password" name="password" placeholder="Password" ng-required="true">
+                	<p class="error" style="margin-left: 20px;" ng-show="form.password.$invalid && form.password.$touched">You must fill out your location.</p>
+                </div>
+                <div class="form-group">
+                    <button type="submit" ng-click="logIn()" ng-disabled="form.$invalid" class="buttonLogin btn">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+	<% include partials/footer.ejs %>
+	<% include partials/jsDefaults.ejs %>
+</body>
+</html>

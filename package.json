@@ -1,0 +1,21 @@
+{
+  "name": "TwitterApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "crypto": "0.0.3",
+    "debug": "~0.7.4",
+    "ejs": "^2.2.4",
+    "express": "3.2.6",
+    "mocha": "^2.4.5",
+    "morgan": "~1.0.0",
+    "mysql": "^2.10.2",
+    "static-favicon": "~1.0.0"
+  }
+}

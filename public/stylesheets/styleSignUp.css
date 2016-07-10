@@ -1,0 +1,105 @@
+div.image{
+    background-repeat:no-repeat;
+    background-size:contain;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 20%;
+}
+h1.header
+{
+    align-self: center;
+    margin-top: 200px;
+    margin-left: 38%;
+    font-size: 230%;
+}
+#divSignUp{
+    margin-left: 260px;
+}
+#firstName{
+    margin-left: 235px;
+    margin-top: 20px;
+    height: 45px;
+}
+#lastName{
+    margin-left: 235px;
+    margin-top: 20px;
+    height: 45px;
+}
+#password{
+    margin-left: 235px;
+    margin-top: 20px;
+    height: 45px;
+}
+#userHandler{
+    margin-left: 235px;
+    margin-top: 20px;
+    height: 45px;
+}
+#email{
+    margin-left: 235px;
+    margin-top: 20px;
+    height: 45px;
+}
+#dateOfBirth{
+    margin-left: 235px;
+    margin-top: 20px;
+    height: 45px;
+}
+#gender{
+    margin-left: 235px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 45px;
+}
+#location{
+	margin-left: 235px;
+    margin-top: 30px;
+    height: 45px;
+}
+::-webkit-input-placeholder {
+    color: lightgrey;
+    font-size: 120%;
+    font-weight: bolder;
+}
+button.buttonLogin
+{
+    margin-left: 235px;
+    margin-top: 20px;
+    height: 45px;
+    width: 350px;
+    padding: 10px 55px ;
+    color: floralwhite;
+    background-color: #55acee;
+    font-size: 15px;
+}
+#smallTag{
+    font-size: 13px;
+    margin-right: 60px;
+    color: floralwhite;
+    font-weight: 700;
+}
+#linkToLogIn{
+    color: #FFFFFF;
+}
+input.ng-invalid.ng-touched {
+	border: 1px solid #DA3637;
+}
+input.ng-valid.ng-touched {
+	border: 1px solid #509D12;
+}
+.ng-invalid.btn{
+	background: gray;
+}
+.error{
+	color:red;
+	margin-left: 235px;
+    margin-top: 20px;
+    height: 45px;
+}
+p{
+	height: 100%;
+	width: 100%;
+}

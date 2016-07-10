@@ -1,0 +1,79 @@
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/styleTopNavigationBar.css' />
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #fff">
+    <div class="container-fluid">
+
+        <!--Menu items -->
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active" ><a href="/home"id="Home"><img src="http://tracigregory.com/wp-content/uploads/2011/12/new-new-twitter-home.png" id="himg" class="nav navbar-nav">
+                        <h4 class ="nav navbar-nav" id="htext" >Home</h4></a> </li>
+            </ul>
+        </div>
+
+        <div class="col-sm-3 col-md-2 pull-center">
+            <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" width = "25" height="30" id="icon" class="img-responsive" >
+        </div>
+
+
+        <!-- TWEET BUTTON (GLOBAL) -->
+        <div class="col-md1 pull right" >
+            <div class="pull-right">
+                <button id="tweetButton">Tweet</button></div>
+        </div>
+        
+        <div class = 'overlay'>
+             <div id= "wrapper">
+                 <h5 id = "h5">Compose new Tweet</h5>
+                 <hr id="hr">
+                 <img id="twitterIcon" src="https://cdn2.iconfinder.com/data/icons/social-18/512/Twitter-3-32.png" />
+                 <form>
+                 <div class="form-group">
+			        <textarea class="form-control" name="tweetMessage" ng-model="tweetMessage" id="tweetMessage1" placeholder="What's Happening?" "></textarea> 
+				    <span class="form-group">
+				        <button class="btn btn-primary" class="buttonTweet1 btn" id="tweetButton1" ng-click="insertTweet();">
+			                <span>Tweet</span>
+			            </button>
+				    </span>
+			    </div>
+                 </form>
+             </div>
+            </div>
+
+        <!-- Profile Options -->
+        <div class="col-md3 pull-right ">
+            <div class=" pull-right ">
+                <ul  class="dropdown">
+                    <!--<ul class="dropdown">-->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="https://cdn4.iconfinder.com/data/icons/twitter-ui-set/128/Egg_Proffile_And_Settings_Twitter-128.png" id="profIcon" width="45" height="45"></img>
+                        <!--<span class="caret"></span>--> </a>
+                    <div class="dropdown-menu">
+                    <li><a href="/logout">Logout</a></li>
+                    </div>
+
+                </ul>
+            </div></div>
+
+        <!-- SEARCH FUNCTIONALITY -->
+        <div class="col-md-3 pull-right">
+            <div class="pull-right">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" ng-model="searchText">
+                        <div class="input-group-btn">
+                            <button id="btn" class="btn btn-link" type="submit" ng-click="searchHash();"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                     </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</nav>
+
+</body>
+</html>

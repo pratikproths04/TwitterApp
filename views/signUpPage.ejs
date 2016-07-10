@@ -1,0 +1,57 @@
+<html>
+<head>
+	<% include partials/head.ejs %>
+    <link rel='stylesheet' href='/stylesheets/styleSignUp.css' />
+    <!-- AngularJS -->
+	<script src= "../javascripts/angular/signUpController.js"></script>
+</head>
+<body ng-app="signUpApp" ng-controller="signUpController">
+	<% include partials/header.ejs %>
+    <div class="container-fluid">
+        <div class="image" style="background-image: url(../images/twitter_image.png);" >
+            <div style="margin-top: 40px;" class="pull-right" id="linkToLogIn">
+                 <h6 >Don't have an account? <a id="linkToLogIn" href="/logIn">Have an account? Log in >></a></h6>
+            </div>
+         </div>
+    </div>
+    <div id = "divSignUp" class = "col-sm-6" style="margin-top: -90px;">
+        <h1 class=" header">Join Twitter Today.</h1>
+        <form name= "form" novalidate>
+            <div class="form-group col-sm-7">
+                <input type="text" class="form-control" id="firstName" ng-model="firstName" placeholder="First Name" name = "firstName" ng-required="true">
+                <p class="error" ng-show="form.firstName.$invalid && form.firstName.$touched">You must fill out your first name.</p>
+            </div>
+            <div class="form-group col-sm-7">
+                <input type="text" class="form-control" id="lastName" ng-model="lastName" placeholder="Last Name" name = "lastName" ng-required="true">
+                <p class="error" ng-show="form.lastName.$invalid && form.lastName.$touched">You must fill out your last name.</p>
+            </div>
+            <div class="form-group col-sm-7">
+                <input type="email" class="form-control" id="email" ng-model="email" placeholder="Email" name = "email" ng-required="true">
+                <p class="error" ng-show="form.email.$invalid && form.email.$touched">You must fill out correct email.</p>
+            </div>
+            <div class="form-group col-sm-7">
+                <input type="password" class="form-control" id="password" ng-model="password" placeholder="Password" name = "password" ng-required="true">
+                <p class="error" ng-show="form.password.$invalid && form.password.$touched">You must fill out your password.</p>
+            </div>
+            <div class="form-group col-sm-7">
+				<input type="text" class="form-control" name="dateOfBirth" ng-model="dateOfBirth" placeholder="Date of Birth (yyyy-mm-dd)"
+					id="dateOfBirth" ng-required="true"/>
+					<p class="error"  ng-show="form.dateOfBirth.$invalid && form.dateOfBirth.$touched">You must fill out your date of birth.</p>
+			</div>
+			<div class="form-group col-sm-7">
+                <input type="text" class="form-control" id="userHandler" ng-model="userHandler" placeholder="User Handler" name = "userHandler" ng-required="true">
+            	<p class="error" ng-show="form.userHandler.$invalid && form.userHandler.$touched">You must fill out any word through which your profile is linked to.</p>
+            </div>
+			 <div class="form-group col-sm-7">
+                <input type="text" class="form-control" id="location" ng-model="location" placeholder="Location" name = "location" ng-required="true">
+            	<p class="error" ng-show="form.location.$invalid && form.location.$touched">You must fill out your location.</p>
+            </div>
+            <div class="form-group col-sm-7">
+                <button type="submit" ng-click="signUp()" ng-disabled="form.$invalid" class="buttonLogin btn">Sign Up</button>
+            </div>
+        </form>
+    </div>
+	<% include partials/footer.ejs %>
+	<% include partials/jsDefaults.ejs %>
+</body>
+</html>

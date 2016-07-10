@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include partials/head.ejs %>
+    <title>Successful Login</title>
+    <link rel='stylesheet' href='/stylesheets/styleProfile.css' />
+    <link rel="stylesheet" href="/stylesheets/styleTopNavBar.css" />
+    <script src="../javascripts/angular/othersController.js"> </script>
+</head>
+<body ng-app="othersApp" ng-controller="othersController" ng-init="init();">
+	<% include partials/header.ejs %>
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #fff">
+	    <div class="container-fluid">	
+	        <!--Menu items -->
+	        <div>
+	            <ul class="nav navbar-nav">
+	                <li class="active" ><a href="/home"id="Home"><img src="http://tracigregory.com/wp-content/uploads/2011/12/new-new-twitter-home.png" id="himg" class="nav navbar-nav">
+	                        <h4 class ="nav navbar-nav" id="htext" >Home</h4></a> </li>
+	            </ul>
+	        </div>
+	
+	        <div class="col-sm-3 col-md-2 pull-center">
+	            <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" width = "25" height="30" id="icon" class="img-responsive" >
+	        </div>
+	
+	        <!-- Profile Options -->
+	        <div class="col-md3 pull-right ">
+	            <div class=" pull-right ">
+	                <ul  class="dropdown">
+	                    <!--<ul class="dropdown">-->
+	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+	                        <img src="https://cdn4.iconfinder.com/data/icons/twitter-ui-set/128/Egg_Proffile_And_Settings_Twitter-128.png" id="profIcon" width="45" height="45"></img>
+	                        <!--<span class="caret"></span>--> </a>
+	                    <div class="dropdown-menu">
+	                    <li><a href="/logout">Logout</a></li>
+	                    </div>
+	                </ul>
+	            </div></div>
+	    </div>
+	</nav>
+	<div>
+		<div class = "backgroundImage">
+		</div>
+		<div  ng-show="showFlag == true">
+		<div class="navBarPF"  ng-show="now == true">
+		   <ul>
+		        <li><a href="#" ng-click="getTweetsList()"><span class="letters">tweets</span><div></div><span id="count1">{{totalTweets}}</span></a></li>
+		        <li><a href="#" ng-click="getFollowingList()"><span class="letters">following</span><div></div><span id="count2">{{totalFollowing}}</span></a></li>
+		        <li><a href="#" ng-click="getFollowersList()"><span class="letters">followers</span><div></div><span id="count3">{{totalFollowers}}</span></a></li>     
+		    </ul>
+		    <div class="col-sm-6 col-offset-3">
+		    	<button type="button" class="btn btn-default pull-right" ng-show="now == false" ng-click="follow();">Follow</button>
+		    	<button type="button" class="btn btn-default pull-right" ng-show="now == true" ng-click="following();">Following</button>
+		    </div>
+		</div>
+		<div class="navBarPF"  ng-show="now == false" style="margin-top: 20px;">
+		    <div class="col-sm-11 col-offset-3">
+		    	<button type="button" class="btn btn-default pull-right" ng-show="now == false" ng-click="follow();">Follow</button>
+		    	<button type="button" class="btn btn-default pull-right" ng-show="now == true" ng-click="following();">Following</button>
+		    </div>
+		</div>
+		<div>
+		    <div id = "ProfilePicWindow"></div>
+		    <div id = "insideProfilePicWindow">
+		    </div>
+		    <div class="col-sm-3 col-offset-1" style="margin-top:-165px;">
+		    	<label class="col-sm-8 col-offset-2"><a href="/profile" style="color: #000000;">{{fullName}}</a></label><br/>
+	        	<label class="col-sm-6 col-offset-0"><a href="/profile">{{userHandler}}</a></label>
+	        	<div class="col-sm-10 col-offset-0"><label>Date Of Birth:</label>{{birthDate}}</div>
+	        	<div class="col-sm-7 col-offset-0"><label>Location:</label>{{location}}</div>
+		    </div>
+		</div>  
+	</div>
+<% include partials/footer.ejs %>
+<% include partials/jsDefaults.ejs %>
+</body>
+</html>
