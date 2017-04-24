@@ -78,7 +78,7 @@ app.controller('homeController',function($scope,$http) {
 	    	}
 	    });
 	}
-	$scope.checkRetweets = function(retweetuser, retweetMessage) {
+	/*$scope.checkRetweets = function(retweetuser, retweetMessage) {
 		console.log("Inside checkTweets");
 		$http({
 	        method : "POST",
@@ -101,7 +101,7 @@ app.controller('homeController',function($scope,$http) {
 	            }
 	    	}
 	    });
-	}
+	}*/
 	$scope.countTweets = function() {
 		console.log("Inside countTweets");
 		$http({
