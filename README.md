@@ -25,12 +25,13 @@ Server: Twitter to demonstrate REST web services Server should perform following
 
 ### Tools & Technologies
 
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org)) 
- [NodeJS](https://nodejs.org/en/)
- [AngularJS](https://angularjs.org/)
- [ExpressJS](https://expressjs.com/)  
- [Twitter Bootstrap](http://getbootstrap.com/2.3.2/)
- [MySQL]{https://www.mysql.com/}
+Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1),
+ ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))
+ Nodeclipse is free open-source project that grows with your contributions., 
+ [NodeJS](https://nodejs.org/en/),
+ [AngularJS](https://angularjs.org/),
+ [ExpressJS](https://expressjs.com/),  
+ [Twitter Bootstrap](http://getbootstrap.com/2.3.2/),
+ [MySQL](https://www.mysql.com/)
 
-Nodeclipse is free open-source project that grows with your contributions.
+
